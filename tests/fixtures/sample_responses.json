@@ -1,0 +1,79 @@
+{
+  "jev_read_only_allow": {
+    "model": "jev-latest",
+    "answers": {
+      "action_class": {
+        "type": "choice",
+        "choice": "read_only",
+        "confidence": 0.97,
+        "probabilities": {
+          "read_only": 0.97,
+          "routine_mutation": 0.02,
+          "destructive_mutation": 0.0,
+          "security_sensitive": 0.0,
+          "unclear": 0.01
+        }
+      },
+      "matches_user_intent": {
+        "type": "noul",
+        "noul": 0.98
+      },
+      "target_in_scope": {
+        "type": "noul",
+        "noul": 0.99
+      },
+      "unintended_damage_risk": {
+        "type": "noul",
+        "noul": 0.02
+      },
+      "needs_human_review": {
+        "type": "noul",
+        "noul": 0.01
+      }
+    },
+    "usage": {
+      "input_tokens": 142,
+      "output_tokens": 10
+    }
+  },
+  "laya_destructive_block": {
+    "model": "typed-decisions",
+    "routing": {
+      "checkpoint": "laya-en-v1"
+    },
+    "answers": {
+      "action_class": {
+        "type": "choice",
+        "choice": "destructive_mutation",
+        "confidence": 0.96,
+        "probabilities": {
+          "read_only": 0.0,
+          "routine_mutation": 0.03,
+          "destructive_mutation": 0.96,
+          "security_sensitive": 0.01,
+          "unclear": 0.0
+        }
+      },
+      "matches_user_intent": {
+        "type": "noul",
+        "noul": 0.14
+      },
+      "target_in_scope": {
+        "type": "noul",
+        "noul": 0.95
+      },
+      "unintended_damage_risk": {
+        "type": "noul",
+        "noul": 0.91
+      },
+      "needs_human_review": {
+        "type": "noul",
+        "noul": 0.97
+      }
+    },
+    "usage": {
+      "input_tokens": 135,
+      "output_tokens": 0
+    }
+  }
+}
